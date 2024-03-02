@@ -1,2 +1,7 @@
 #!/usr/bin/env ruby
-input = gets.chomp.split(" ")
+s = gets.chomp.chars
+if s.sort == s
+  puts "Yes"
+else
+  puts "No"
+end
