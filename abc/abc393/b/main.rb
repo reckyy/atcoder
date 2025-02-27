@@ -19,6 +19,7 @@ end
 
 a_indexes.each do |i|
   b_indexes.each do |j|
+    next if i > j
     d = j - i
     k = j + d
     count += 1 if c_indexes[k]
