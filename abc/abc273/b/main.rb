@@ -19,3 +19,21 @@ ans = x.chars.map(&:to_i).reverse
   end
 
 puts ans.reverse.join('')
+
+# ChatGPTに聞いた
+x, k = gets.chomp.split
+k = k.to_i
+x = x.to_i
+
+(0...k).each do |i|
+  place = 10**i
+  digit = (x / place) % 10
+
+  if digit >= 5
+    x += place * (10 - digit)
+  else
+    x -= digit * place
+  end
+end
+
+puts x
